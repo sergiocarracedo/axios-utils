@@ -17,6 +17,7 @@ This utility is used to guard your axios instance from sending requests with inv
 ### `setupJwtAuth`
 This utility is used to automatically add JWT token to your axios requests. It will automatically refresh the token if it is expired. It also provides a way to automatically execute a callback function when the token is expired or on 401 errors.
 
+> This guard doesn't check the token signature. It only checks the token expiration date, but your application must validate the token signature. 
 ```ts
 ```
 
