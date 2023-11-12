@@ -1,0 +1,32 @@
+{
+  "name": "axios-scm-utils-root",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Sergio Carracedo <hi@sergiocarracedo.es>"
+  },
+  "packageManager": "pnpm@7.24.3",
+  "scripts": {
+    "dev": "pnpm run --filter axios-scm-utils dev",
+    "build": "pnpm run --filter axios-scm-utils build",
+    "lint": "pnpm run --filter axios-scm-utils lint"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "entry": "packages/axios-utils/dist",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2"
+  },
+  "lint-staged": {
+    "packages/**/*.{js,jsx,ts,tsx}": [
+      "pnpm lint"
+    ]
+  }
+}
